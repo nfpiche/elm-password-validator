@@ -3,9 +3,9 @@ module PasswordValidation exposing (..)
 import String
 import Char
 
-passwordLength : String -> Bool
-passwordLength password = 
-  if String.length password >= 8 then True else False
+passwordLength : String -> Int -> Bool
+passwordLength password requiredLength = 
+  if String.length password >= requiredLength then True else False
 
 containsNumber : String -> Bool
 containsNumber password =
