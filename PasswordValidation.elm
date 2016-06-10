@@ -5,29 +5,26 @@ import Char
 
 passwordLength : String -> Int -> Bool
 passwordLength password requiredLength = 
-  if String.length password >= requiredLength then True else False
+  String.length password >= requiredLength
 
 containsNumber : String -> Bool
 containsNumber password =
-  let filteredString =
-    String.filter Char.isDigit(password)
-  in
-    if String.isEmpty filteredString then False else True
+  String.filter Char.isDigit(password)
+  |> String.isEmpty
+  |> not
 
 containsUpper : String -> Bool
 containsUpper password =
-  let filteredString =
-    String.filter Char.isUpper(password)
-  in
-    if String.isEmpty filteredString then False else True
+  String.filter Char.isUpper(password)
+  |> String.isEmpty
+  |> not
 
 containsLower : String -> Bool
 containsLower password =
-  let filteredString =
-    String.filter Char.isLower(password)
-  in
-    if String.isEmpty filteredString then False else True
+  String.filter Char.isLower(password)
+  |> String.isEmpty
+  |> not
 
 passwordsMatch : String -> String -> Bool
 passwordsMatch password passwordConfirm =
-  if password == passwordConfirm then True else False
+  password == passwordConfirm
