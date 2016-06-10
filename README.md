@@ -1,3 +1,3 @@
-# Just import the package and call the functions as needed
+### Just import the package and call the functions as needed
 
-# ./run\_tests to run tests
+### ./run\_tests to run tests
